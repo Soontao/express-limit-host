@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/Soontao/express-limit-host/compare/v0.0.4...v0.0.5) (2021-02-03)
+
+
+### Bug Fixes
+
+* ut ([ce5380a](https://github.com/Soontao/express-limit-host/commit/ce5380a7e09d9fc368a3c5d77857ab3e318b0cba))
+
 ### [0.0.4](https://github.com/Soontao/express-limit-host/compare/v0.0.3...v0.0.4) (2021-02-03)
 
 
