@@ -1,7 +1,7 @@
 import { Handler } from "express";
 import createError from "http-errors";
 
-export interface Options {
+interface Options {
   /**
    * allow loopback hostname (enabled default)
    */
@@ -24,7 +24,7 @@ const defaultOption: Options = {
 
 const LOOPBACK_HOSTS = ['localhost', '127.0.0.1'];
 
-export const createHostLimit = (option: Options = defaultOption): Handler => {
+const createHostLimit = (option: Options = defaultOption): Handler => {
   option = Object.assign(defaultOption, option);
 
   return (req, res, next) => {
@@ -40,12 +40,12 @@ export const createHostLimit = (option: Options = defaultOption): Handler => {
       return next(
         createError(
           option.rejectStatusCode,
-          `${hostname} is not trusted for proxy`
+          `'${hostname}' is not trusted for proxy`
         )
       );
     }
   };
 };
 
-export default createHostLimit;
+export = createHostLimit
 
