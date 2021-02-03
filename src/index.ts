@@ -11,9 +11,9 @@ const defaultOption: Options = {
   whitelists: []
 };
 
-const LOOPBACK_HOSTS = ['localhost', '127.0.0.1', '::1'];
+const LOOPBACK_HOSTS = ['localhost', '127.0.0.1'];
 
-export const limitForwardedHost = (option: Options = defaultOption): Handler => {
+export const createHostLimit = (option: Options = defaultOption): Handler => {
   option = Object.assign(defaultOption, option);
 
   return (req, res, next) => {
@@ -30,4 +30,6 @@ export const limitForwardedHost = (option: Options = defaultOption): Handler => 
     }
   };
 };
+
+export default createHostLimit;
 
