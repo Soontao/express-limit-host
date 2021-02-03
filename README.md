@@ -1,4 +1,4 @@
-# express-limit-host
+# express limit host
 
 ![node-test](https://github.com/Soontao/express-limit-host/workflows/node-test/badge.svg)
 [![codecov](https://codecov.io/gh/Soontao/express-limit-host/branch/main/graph/badge.svg?token=gTDJNGSGcQ)](https://codecov.io/gh/Soontao/express-limit-host)
@@ -8,6 +8,8 @@
 simple middleware to protect server from `host`/`x-forwarded-host` injection.
 
 ## Usage
+
+> just install & use it as an express middleware
 
 
 ```ts
@@ -24,4 +26,10 @@ app.use(createHostLimit({
   ],
   rejectStatusCode: 403
 }))
+
+// add your router/handler
 ```
+
+## [CHANGELOG](./CHANGELOG.md)
+
+## [LICENSE](./LICENSE)
