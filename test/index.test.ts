@@ -1,7 +1,7 @@
 import { sleep } from "@newdash/newdash";
 import express from "express";
 import supertest from "supertest";
-import { createHostLimit } from "../src";
+import createHostLimit from "../src";
 
 const X_FORWARDED_HOST = 'x-forwarded-host';
 
