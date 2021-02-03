@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/Soontao/express-limit-host/compare/v0.0.2...v0.0.3) (2021-02-03)
+
+
+### Features
+
+* support customize reject response status ([9b0788a](https://github.com/Soontao/express-limit-host/commit/9b0788a543514f45ae049b0bed5e70b8d63e159c))
+
 ### 0.0.2 (2021-02-03)
 
 
