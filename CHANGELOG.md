@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/Soontao/express-limit-host/compare/v0.0.3...v0.0.4) (2021-02-03)
+
+
+### Bug Fixes
+
+* commonjs ([a0f5390](https://github.com/Soontao/express-limit-host/commit/a0f539070e0e07299e1134261d29df886b0dfbb9))
+
 ### [0.0.3](https://github.com/Soontao/express-limit-host/compare/v0.0.2...v0.0.3) (2021-02-03)
 
 
