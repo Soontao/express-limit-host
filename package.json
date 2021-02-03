@@ -1,7 +1,8 @@
 {
-  "name": "template",
+  "name": "express-limit-forwarded-host",
   "version": "0.0.1",
   "main": "lib/index.js",
+  "license": "MIT",
   "scripts": {
     "test": "jest --detectOpenHandles --passWithNoTests",
     "prebuild": "rimraf lib",
@@ -14,17 +15,23 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "http-errors": "^1.8.0"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/express": "^4.17.11",
+    "@types/http-errors": "^1.8.0",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.16",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
     "commitlint": "^11.0.0",
     "eslint": "^7.16.0",
+    "express": "^4.17.1",
     "husky": "^4.3.6",
     "jest": "^26.6.3",
+    "node-fetch": "^2.6.1",
     "rimraf": "^3.0.2",
     "standard-version": "^9.1.0",
     "ts-jest": "^26.4.4",
@@ -35,5 +42,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soontao/express-limit-forwarded-host"
   }
 }
