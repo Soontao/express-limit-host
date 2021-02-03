@@ -34,7 +34,7 @@ describe('Middleware Test Suite', () => {
 
   it('should accept user defined whitelist', async () => {
 
-    const req = supertest(createApp({ whitelists: ['custom.org'] }));
+    const req = supertest(createApp({ allowList: ['custom.org'] }));
     await req.get("/index").set(X_FORWARDED_HOST, 'localhost').expect(200);
     await req.get("/index").set(X_FORWARDED_HOST, '127.0.0.1').expect(200);
     await req.get("/index").set(X_FORWARDED_HOST, 'custom.org').expect(200);
@@ -47,6 +47,18 @@ describe('Middleware Test Suite', () => {
     const req = supertest(createApp({ loopback: false }));
     await req.get("/index").set(X_FORWARDED_HOST, 'localhost').expect(403);
     await req.get("/index").set(X_FORWARDED_HOST, '127.0.0.1').expect(403);
+
+  });
+
+  it('should support customize reject response status', async () => {
+
+    const req = supertest(createApp({
+      loopback: false,
+      rejectStatusCode: 500
+    }));
+
+    await req.get("/index").set(X_FORWARDED_HOST, 'localhost').expect(500);
+    await req.get("/index").set(X_FORWARDED_HOST, '127.0.0.1').expect(500);
 
   });
 
